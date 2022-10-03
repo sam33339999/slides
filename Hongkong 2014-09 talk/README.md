@@ -13,7 +13,8 @@
 ## Redis 的關鍵概念
 - 一個 nosql db
 - 記憶體，且持久
-- 鍵值對，並且有不同的數據結構 various 不同的
+- 鍵值對，並且有不同的數據結構
+    - various 不同的
 - 允許 Time-to live(TTL)
 - 允許阻塞I/O
 
