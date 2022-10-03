@@ -32,14 +32,14 @@ FOR EACH ROW ...
     - 商業邏輯寫在 應用層，有什麼錯還能直接連進去資料庫直接跑 SQL 改正
     - 一但商業邏輯寫在 RDBMS 內，有問題時可能沒辦法即時做資料修正。
     - 除非要做到上述的兩種情境，否則絕對不要用 trigger
-
 ## view
-    - 除非要做到 database refactoring ，否則絕對別用 updatable view
-    - 想像成 view 是一個 placeholder ，用一個名字來替代本來的 subquery
-    - 理論上：用了 view 和原本的 query 對比，其執行計畫應該是相同的，效能應該也是 100% 相同
 
-    - 上古時代的用途：
-        - 資料庫需要讓第三方直接連入拿資料，但有些敏感欄位不能讓他們資到
-        - 寫報表時其 SQL 又臭又長，用 view 把 SQL 拆開來變得容易閱讀
+- 除非要做到 database refactoring ，否則絕對別用 updatable view
+- 想像成 view 是一個 placeholder ，用一個名字來替代本來的 subquery
+- 理論上：用了 view 和原本的 query 對比，其執行計畫應該是相同的，效能應該也是 100% 相同
+
+- 上古時代的用途：
+    - 資料庫需要讓第三方直接連入拿資料，但有些敏感欄位不能讓他們資到
+    - 寫報表時其 SQL 又臭又長，用 view 把 SQL 拆開來變得容易閱讀
 
 
